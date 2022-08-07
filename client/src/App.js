@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Main from "./views/Main";
-import axios from "axios";
+import Details from "./components/Details";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Main />} path="/" />
+          <Route element={<Details />} path="/todo/:id" />
         </Routes>
       </BrowserRouter>
     </div>
