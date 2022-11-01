@@ -3,7 +3,7 @@ const TodoSchema = new mongoose.Schema(
   {
     name: { type: String },
     task: { type: String },
-    priority: { type: Boolean },
+    // priority: { type: Boolean },
   },
   { timestamps: true }
 );

@@ -5,7 +5,7 @@ const TodoForm = (props) => {
   const { todo, setTodo } = props;
   const [name, setName] = useState("");
   const [task, setTask] = useState("");
-  const [priority, setPriority] = useState(false);
+  // const [priority, setPriority] = useState(false);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -13,7 +13,7 @@ const TodoForm = (props) => {
       .post("http://localhost:8000/api/todo", {
         name,
         task,
-        priority,
+        // priority,
       })
       .then((res) => {
         console.log(res);
@@ -45,13 +45,13 @@ const TodoForm = (props) => {
               onChange={(e) => setTask(e.target.value)}
             ></input>
           </p>
-          <p className="d-flex justify-content-center mx-5">
+          {/* <p className="d-flex justify-content-center mx-5">
             <label>Is this task urgent?</label>
             <input
               type="checkbox"
               onChange={(e) => setPriority(e.target.value)}
             ></input>
-          </p>
+          </p> */}
           <div className="d-flex">
             <input className="d-flex mx-2" type="submit" />
           </div>
